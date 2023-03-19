@@ -17,7 +17,7 @@ with open('filekey.key', 'rb') as filekey:
 fernet = fernet(key)
  
 # opening the original file to encrypt
-origfile = 'hitext.txt'
+origfile = 'path/to/originalfile'
 with open(origfile, 'rb') as file:
     original = file.read()
      
@@ -26,7 +26,7 @@ encrypted = fernet.encrypt(original)
  
 # opening the file in write mode and
 # writing the encrypted data
-encfile = 'encrypted{}.txt'.format('original').split('.')[0] #removing the extension
+encfile = 'path/to/encryptedfile'
 #getting the extension
 
 
